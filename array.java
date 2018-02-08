@@ -31,7 +31,7 @@ class Array
     for (int i=0;i<5;i++) {
       for (int j=0;j<5;j++) {
         if (x[i] == obj2.x[j]) {
-          System.out.print(x[j]);
+          System.out.print(x[j]+" ");
           break;
         }
       }
@@ -42,13 +42,21 @@ class Main
 {
   public static void main(String args[]) {
     Array ob1 = new Array(9,8,7,6,5);
-    Array ob2 = new Array(1,2,3,4,5);
+    System.out.print("Object 1: ");
     System.out.print("\nTraversing... ");
     ob1.traverse();
     System.out.print("\nReversing... ");
     ob1.reverse();
     ob1.sum();
-    System.out.print("\nCommon values --> ");
+    Array ob2 = new Array(1,2,3,6,5);
+    System.out.print("\n\nObject 2: ");
+    System.out.print("\nTraversing... ");
+    ob2.traverse();
+    System.out.print("\nReversing... ");
+    ob2.reverse();
+    ob2.sum();
+    System.out.print("\n\nCommon values --> ");
     ob1.common(ob2);
+    System.out.println();
   }
 }
